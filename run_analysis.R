@@ -32,4 +32,4 @@ casted <- melt(alldata, id=c("subject", "activity")) %>%
   dcast(subject + activity ~ variable, mean)
 
 # save our data from previous step
-write.table(casted, file="varAvgsBasedOnSubjectAndActivity.txt")
+write.table(casted, file="varAvgsBasedOnSubjectAndActivity.txt", row.name=FALSE)
